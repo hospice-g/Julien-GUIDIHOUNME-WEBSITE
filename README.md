@@ -17,7 +17,7 @@ A professional academic personal website — HTML/CSS/JavaScript — ready for G
 └── README.md
 ```
 
-## Customization
+<!-- ## Customization
 
 ### 1. Personal information
 
@@ -72,4 +72,4 @@ You can later connect a personal domain from:
 
 ## Language
 
-The website interface and visible content are designed to be fully in English for an international academic audience.
+The website interface and visible content are designed to be fully in English for an international academic audience. -->
