@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg:#f4f3ef; --paper:#fbfaf7; --ink:#171817; --muted:#70736e;
+  --line:#d9d8d1; --accent:#0f6473; --accent-light:#a7d5d9;
+  --dark:#101615; --max:1180px;
+}
+[data-theme="dark"] {
+  --bg:#101312; --paper:#171b19; --ink:#f1f2ed; --muted:#a2a8a2;
+  --line:#303632; --accent:#77ced5; --accent-light:#2d5960; --dark:#090c0b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(calc(100% - 48px),var(--max));margin:auto}
+.header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;gap:28px}
+.logo{font:700 28px "Space Grotesk";margin-right:auto}.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:27px;font-size:13px;font-weight:600}
+.nav-links a:hover{color:var(--accent)}
+.nav-tools{display:flex;gap:8px;margin-left:15px}
+.nav-tools button,.menu-toggle{background:var(--paper);color:var(--ink);border:1px solid var(--line);height:38px;min-width:38px;border-radius:5px;cursor:pointer;font-weight:700}
+.menu-toggle{display:none;font-size:18px}
+.hero{min-height:calc(100vh - 78px);position:relative;overflow:hidden;padding:90px 0}
+.hero-bg{position:absolute;width:600px;height:600px;right:-240px;top:-220px;border-radius:50%;background:var(--accent-light);opacity:.35;filter:blur(30px)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:80px;align-items:center;position:relative}
+.availability{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.availability span{width:7px;height:7px;border-radius:50%;background:#3ca36c}
+.eyebrow,.section-intro>p,.section-head p,.thesis-top p,.contact-section>p{font-size:11px;letter-spacing:.15em;font-weight:700;color:var(--accent)}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.04}
+h1{font-size:clamp(54px,7vw,92px);letter-spacing:-.06em;margin-bottom:28px}
+h1 em,h2 em{font-style:normal;color:var(--accent)}
+.lead{font-size:18px;color:var(--muted);max-width:630px}
+.actions{display:flex;gap:10px;margin:34px 0}
+.button{display:inline-flex;gap:22px;align-items:center;padding:14px 18px;border:1px solid var(--line);font-size:13px;font-weight:700;border-radius:4px}
+.button-dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.button-light{background:var(--paper)}
+.social-row{display:flex;gap:22px;flex-wrap:wrap;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.social-row a:hover{color:var(--accent)}
+.hero-visual{position:relative;min-height:570px}
+.photo-frame{position:absolute;inset:0 30px 45px 0;overflow:hidden;background:#d8d8d4}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:saturate(.9)}
+.photo-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.25))}
+.affiliation-card{position:absolute;right:0;bottom:0;width:270px;padding:23px;background:var(--paper);border:1px solid var(--line);box-shadow:0 15px 45px #00000015}
+.affiliation-card span,.affiliation-card small{display:block;color:var(--muted);font-size:11px}.affiliation-card strong{display:block;font:600 19px "Space Grotesk";margin:5px 0}.visual-note{position:absolute;right:-4px;top:20px;writing-mode:vertical-rl;font-size:9px;letter-spacing:.15em;color:var(--muted)}
+.section{padding:125px 0}
+.split{display:grid;grid-template-columns:.75fr 1.25fr;gap:110px}
+.section-no{font:600 12px "Space Grotesk";color:var(--accent);display:block;margin-bottom:12px}
+.section-intro h2{font-size:46px;letter-spacing:-.045em;margin-top:15px}
+.content{max-width:730px;color:var(--muted);font-size:16px}.content p{margin-bottom:21px}
+.big-text{font-size:25px;line-height:1.4!important;color:var(--ink)}.content strong{color:var(--ink)}
+.facts{border-top:1px solid var(--line);margin-top:35px;display:grid;grid-template-columns:1fr 1fr}
+.facts div{padding:17px 0;border-bottom:1px solid var(--line)}.facts span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.facts strong{font-size:14px}
+.dark-section{background:var(--dark);color:#f0f2ed}.dark-section .section-no,.dark-section .section-head>p{color:var(--accent-light)}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}.section-head>p{color:#8f9690}
+.research-list{border-top:1px solid #ffffff22}
+.research-list article{display:grid;grid-template-columns:70px 1fr 40px;gap:20px;padding:30px 0;border-bottom:1px solid #ffffff22;align-items:start}
+.research-list article>span{color:#7f8983;font-size:12px}.research-list h3{font-size:29px;margin-bottom:8px}.research-list p{color:#8f9690;max-width:600px;font-size:14px}.research-list b{font-size:20px;color:var(--accent-light)}
+.thesis-section{background:var(--accent);color:#f7fbfa}.thesis-top{display:flex;justify-content:space-between;align-items:start}.thesis-top .section-no,.thesis-top p{color:#c7ecef}.date-label{font-size:12px;font-weight:700;letter-spacing:.1em}
+.thesis-title{max-width:1050px;margin:70px 0 75px}.thesis-title span{font-size:16px;opacity:.75}.thesis-title h2{font-size:clamp(35px,5vw,62px);letter-spacing:-.045em;margin-top:13px}
+.thesis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;border-top:1px solid #ffffff55;padding-top:28px}.thesis-grid span{font-size:11px;font-weight:700;letter-spacing:.1em}.thesis-grid p{margin-top:10px;opacity:.8;font-size:14px}
+.light-head .text-link{color:var(--accent);font-size:13px;font-weight:700}
+.pub-placeholder{display:grid;grid-template-columns:80px 1fr 100px;gap:25px;align-items:start;border-top:1px solid var(--line);padding:28px 0}
+.pub-year{color:var(--accent);font-size:13px;font-weight:700}.pub-placeholder h3{font-size:21px}.pub-placeholder p{color:var(--muted);font-size:13px;margin-top:6px}.pub-placeholder>a{font-size:12px;font-weight:700;text-align:right}
+.projects-section{background:var(--paper)}
+.centered{text-align:center}.centered .section-no{display:inline-block}.centered h2{margin-top:15px;font-size:49px}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:55px}
+.project{position:relative;border:1px solid var(--line);padding:30px;min-height:350px;background:var(--bg)}.project-index{font:600 12px "Space Grotesk";color:var(--accent);margin-bottom:45px}.project>span{font-size:10px;letter-spacing:.14em;font-weight:700;color:var(--muted)}.project h3{font-size:26px;margin:12px 0}.project p{font-size:14px;color:var(--muted)}.chips{position:absolute;bottom:28px;display:flex;gap:6px;flex-wrap:wrap}.chips i{font-style:normal;border:1px solid var(--line);padding:4px 8px;font-size:10px;color:var(--muted)}
+.education-list>div{display:grid;grid-template-columns:150px 1fr;gap:25px;padding:22px 0;border-bottom:1px solid var(--line)}.education-list>div:first-child{border-top:1px solid var(--line)}.education-list>div>span{font-size:11px;color:var(--accent);font-weight:700}.education-list h3{font-size:20px}.education-list p{font-size:13px;color:var(--muted);margin-top:4px}
+.contact-section{background:var(--dark);color:#f2f4ef;padding:135px 0}.contact-inner{max-width:900px}.contact-inner .section-no,.contact-inner>p{color:var(--accent-light)}.contact-inner h2{font-size:clamp(60px,8vw,105px);margin:25px 0 45px;letter-spacing:-.06em}.email{display:inline-block;font:600 clamp(21px,3vw,34px) "Space Grotesk";border-bottom:1px solid #ffffff55;padding-bottom:8px}.contact-meta{display:flex;justify-content:space-between;gap:20px;color:#8f9690;font-size:12px;margin-top:70px;padding-top:22px;border-top:1px solid #ffffff22}
+footer{background:var(--dark);border-top:1px solid #ffffff18;color:#a4aaa4}.footer{min-height:75px;display:flex;justify-content:space-between;align-items:center;font-size:11px}
+@media(max-width:850px){.nav-links{display:none;position:absolute;top:78px;left:0;right:0;background:var(--paper);padding:20px 24px;border-bottom:1px solid var(--line);flex-direction:column}.nav-links.open{display:flex}.menu-toggle{display:block}.hero-grid,.split{grid-template-columns:1fr;gap:55px}.hero{padding:70px 0}.hero-visual{min-height:500px}.research-list h3{font-size:23px}.thesis-grid,.project-grid{grid-template-columns:1fr}.project{min-height:300px}.contact-meta{flex-direction:column}}
+@media(max-width:560px){.container{width:min(calc(100% - 28px),var(--max))}.nav{gap:8px}.nav-tools{margin-left:0}.lang-toggle{display:none}.hero-visual{min-height:410px}.photo-frame{inset:0 18px 35px 0}.affiliation-card{width:220px;padding:17px}.affiliation-card strong{font-size:16px}h1{font-size:54px}.actions{flex-direction:column}.button{justify-content:space-between}.section{padding:85px 0}.section-intro h2,.centered h2{font-size:38px}.big-text{font-size:21px}.facts{grid-template-columns:1fr}.research-list article{grid-template-columns:38px 1fr}.research-list b{display:none}.pub-placeholder{grid-template-columns:60px 1fr}.pub-placeholder>a{grid-column:2;text-align:left}.footer{padding:16px 0;flex-direction:column;gap:6px}}
