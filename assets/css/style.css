@@ -85,3 +85,13 @@ footer{background:var(--dark);border-top:1px solid #ffffff18;color:#a4aaa4}.foot
   max-width: 900px;
   text-align: center;
 }
+
+.supervisor-link {
+  color: #00028b;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.supervisor-link:hover {
+  color: #c0392b;
+}
